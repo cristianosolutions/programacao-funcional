@@ -1,0 +1,20 @@
+{
+  "name": "programacao-funcional",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "jest --runInBand"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  },
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
