@@ -3,18 +3,9 @@
     "id": 1,
     "username": "cristiano",
     "email": "cristianosolutions@gmail.com",
-    "password": "b9c1dedd8e40df22c450b01c6cde84d0:6694223ad4e642e6f3bc706ee4b20382826e8dda572875afc6bc37f5cbba8b3d",
-    "role": "user",
-    "createdAt": "2025-09-04T21:52:07.688Z",
-    "active": true
-  },
-  {
-    "id": 2,
-    "username": "rafael",
-    "email": "rafaelteste@gmail.com",
-    "password": "af5eac64e75960e73163ae52ed1ce37b:acbfd6deb3959e520a6488885dc5a2100716d7c48f71d3d417763d38cff585f2",
+    "password": "9a99612d6a5d9f3b2d71819c4e5884a8:fb5b95b1634ac3a8ab135beb999ad0745a178c5c470824765fdb0fcfb53dfd8c",
     "role": "admin",
-    "createdAt": "2025-09-04T21:53:02.070Z",
+    "createdAt": "2025-09-05T21:25:48.524Z",
     "active": true
   }
 ]
