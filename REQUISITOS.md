@@ -1,13 +1,14 @@
-# Documento de Requisitos - (Programação Funcional)
+# 📝 Documento de Requisitos - (Programação Funcional)
 
-Este documento descreve os **requisitos funcionais e não funcionais** do sistema, relacionando cada requisito às partes específicas do código que o implementam.
+Este documento descreve os **requisitos funcionais e não funcionais** do sistema, relacionando cada requisito às partes específicas do código que foi implementado.
 
 ---
+<br>
 
 ## ✅ Requisitos Funcionais
 
 1. **Cadastrar usuários no sistema**  
-   - **Descrição:** O sistema deve permitir adicionar novos usuários com nome, e-mail, senha e cargo.  
+   - **Descrição:** O sistema deve permitir adicionar novos usuários com nome, e-mail, senha.  
    - **Implementação:**  
      - Função `makeUserAdder` (`src/main.js`)  
      - Persistência via `saveUsers` (`src/storage.js`)  
@@ -88,4 +89,5 @@ Este documento descreve os **requisitos funcionais e não funcionais** do sistem
 
 📌 **Conclusão:**  
 Todos os requisitos funcionais e não funcionais foram implementados e documentados, garantindo rastreabilidade entre especificação e código.
+
 
