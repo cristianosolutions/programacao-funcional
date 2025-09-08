@@ -45,7 +45,7 @@ console.log(`
 1) Listar usuários
 2) Cadastrar usuário
 3) Autenticar
-4) Listar adminitradores
+4) Listar administrador
 5) Mostrar nomes de usuários
 0) Sair`);
 const choice = await question('Escolha uma opção acima: ');
