@@ -1,4 +1,4 @@
-# Documento de Requisitos - Sistema de Gerenciamento de Usuários (Programação Funcional)
+# Documento de Requisitos - (Programação Funcional)
 
 Este documento descreve os **requisitos funcionais e não funcionais** do sistema, relacionando cada requisito às partes específicas do código que o implementam.
 
@@ -88,3 +88,4 @@ Este documento descreve os **requisitos funcionais e não funcionais** do sistem
 
 📌 **Conclusão:**  
 Todos os requisitos funcionais e não funcionais foram implementados e documentados, garantindo rastreabilidade entre especificação e código.
+
