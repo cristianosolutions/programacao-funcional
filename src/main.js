@@ -42,12 +42,12 @@ const addUser = makeUserAdder(saveUsers);
 
 while (true) {
 console.log(`
-1) List users
-2) Add user
-3) Authenticate
-4) Find admins
-5) Print usernames
-0) Exit`);
+1) Listar usuários
+2) Cadastrar usuário
+3) Autenticar
+4) Listar adminitradores
+5) Mostrar nomes de usuários
+0) Sair`);
 const choice = await question('Escolha uma opção acima: ');
 
 
