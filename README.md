@@ -14,3 +14,39 @@ Avaliar a aplicação de **Programação Funcional** no desenvolvimento de um pe
 
 ---
 
+
+ 📌 Este projeto é uma aplicação **CLI (Command Line Interface)** desenvolvida em **Node.js**, que permite **cadastrar, autenticar, listar e filtrar usuários**.  
+<br>
+
+## 🚀 Como Executar
+
+### 1. Pré-requisitos
+- Node.js (v18 ou superior) instalado na sua máquina.
+
+### 2. Clonar o repositório ou baixa
+   ```bash
+   https://github.com/cristianosolutions/programacao-funcional.git
+  ```
+### 3. Instalar dependências
+No diretório do projeto, rode:
+```bash
+npm install
+```
+### 4. Iniciar o programa
+Execute:
+```bash
+npm start
+```
+O programa irá executar e mostrar os seguintes menus:
+```bash
+1) Listar usuários
+2) Cadastrar usuário
+3) Autenticar
+4) Listar administrador
+5) Mostrar nomes de usuários
+0) Sair
+Escolha uma opção acima:
+```
+
+
+
