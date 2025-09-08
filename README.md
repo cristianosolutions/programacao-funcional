@@ -47,6 +47,7 @@ O programa irá executar e mostrar os seguintes menus:
 0) Sair
 Escolha uma opção acima:
 ```
+---
 
 
 
