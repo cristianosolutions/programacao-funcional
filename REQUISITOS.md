@@ -1,101 +1,90 @@
-# Projeto: Sistema de Gerenciamento de Usuários (Programação Funcional em JavaScript)
+# Documento de Requisitos - Sistema de Gerenciamento de Usuários (Programação Funcional)
 
-Este projeto implementa um **sistema de gerenciamento de usuários** em **JavaScript**, explorando conceitos de **programação funcional**.  
-O sistema roda em linha de comando (CLI) e permite cadastrar, listar, autenticar e filtrar usuários.  
-
----
-
-## 🎯 Objetivo
-Avaliar a aplicação de **Programação Funcional** no desenvolvimento de um pequeno projeto em **JavaScript**, utilizando **Node.js** e explorando:
-- Funções de alta ordem  
-- Closures  
-- Lambdas (funções anônimas)  
-- Operações de mapeamento e filtragem (list comprehension)
+Este documento descreve os **requisitos funcionais e não funcionais** do sistema, relacionando cada requisito às partes específicas do código que o implementam.
 
 ---
 
-## 📝 Requisitos
+## ✅ Requisitos Funcionais
 
-### ✅ Requisitos Funcionais
-1. **Cadastrar usuários** no sistema.  
-   - Implementado em: `makeUserAdder` (`src/main.js`)  
-   - O usuário é salvo em `users.json`.  
+1. **Cadastrar usuários no sistema**  
+   - **Descrição:** O sistema deve permitir adicionar novos usuários com nome, e-mail, senha e cargo.  
+   - **Implementação:**  
+     - Função `makeUserAdder` (`src/main.js`)  
+     - Persistência via `saveUsers` (`src/storage.js`)  
 
-2. **Autenticar usuários** com login e senha.  
-   - Implementado em: `authenticate` (`src/main.js`)  
-   - Verificação via `verifyPassword` (`src/auth.js`).  
+2. **Autenticar usuários com login e senha**  
+   - **Descrição:** O sistema deve validar as credenciais de login comparando senha digitada com a senha armazenada.  
+   - **Implementação:**  
+     - Função `authenticate` (`src/main.js`)  
+     - Funções `hashPassword` e `verifyPassword` (`src/auth.js`)  
 
-3. **Listar usuários cadastrados**.  
-   - Implementado no menu CLI (`src/main.js`, opção `1`).  
+3. **Listar usuários cadastrados**  
+   - **Descrição:** O sistema deve permitir listar todos os usuários armazenados.  
+   - **Implementação:**  
+     - Loop `users.forEach(...)` (`src/main.js`, opção 1 do menu)  
 
-4. **Filtrar administradores** do sistema.  
-   - Implementado com `filterUsers` e função **lambda** (`src/utils.js`).  
+4. **Filtrar administradores**  
+   - **Descrição:** O sistema deve permitir encontrar somente usuários com papel `admin`.  
+   - **Implementação:**  
+     - Função `filterUsers` (`src/utils.js`)  
+     - Função lambda usada no menu (opção 4, `src/main.js`)  
 
-5. **Imprimir somente os nomes de usuário**.  
-   - Implementado com `mapUsernames` (`src/utils.js`).  
+5. **Imprimir apenas nomes de usuários**  
+   - **Descrição:** O sistema deve exibir somente a lista de usernames cadastrados.  
+   - **Implementação:**  
+     - Função `mapUsernames` (`src/utils.js`)  
+     - Usada no menu (opção 5, `src/main.js`)  
 
-6. **Armazenar credenciais com segurança**.  
-   - Senhas são convertidas para **hash** com SHA-256.  
-   - Implementado em `hashPassword` e `verifyPassword` (`src/auth.js`).  
-
----
-
-### ⚙️ Requisitos Não Funcionais
-1. **Persistência em arquivo JSON** para manter dados salvos.  
-   - Implementado em `loadUsers` e `saveUsers` (`src/storage.js`).  
-
-2. **Interface simples em CLI** para interação.  
-   - Implementado com `readline` (`src/main.js`).  
-
-3. **Imutabilidade** no cadastro de usuários.  
-   - `makeUserAdder` usa `[...users, user]` em vez de mutar o array.  
-
-4. **Organização modular**.  
-   - Código separado em: `auth.js`, `storage.js`, `utils.js` e `main.js`.  
+6. **Armazenar credenciais com segurança**  
+   - **Descrição:** O sistema deve salvar senhas criptografadas, nunca em texto puro.  
+   - **Implementação:**  
+     - Função `hashPassword` (`src/auth.js`)  
+     - Função `verifyPassword` (`src/auth.js`)  
 
 ---
 
-## 💻 Conceitos de Programação Funcional Aplicados
+## ⚙️ Requisitos Não Funcionais
 
-1. **Função Lambda**  
-   - Exemplo:  
-     ```js
-     const admins = filterUsers(u => u.role === 'admin', users);
-     ```  
-     Local: `src/main.js` (opção 4 do menu).  
+1. **Persistência em arquivo JSON**  
+   - **Descrição:** Os dados devem ser mantidos mesmo após encerrar a aplicação.  
+   - **Implementação:**  
+     - Funções `loadUsers` e `saveUsers` (`src/storage.js`)  
 
-2. **List Comprehension (Map)**  
-   - Exemplo:  
-     ```js
-     const names = mapUsernames(users);
-     ```  
-     Local: `src/utils.js`  
+2. **Interface baseada em CLI**  
+   - **Descrição:** O sistema deve ser executado no terminal via linha de comando.  
+   - **Implementação:**  
+     - Uso da biblioteca `readline` (`src/main.js`)  
 
-3. **Closure**  
-   - Exemplo:  
-     ```js
-     const makeUserAdder = (saveFn) => (users, username, email, password, role = 'user') => { ... }
-     ```  
-     Local: `src/main.js`  
-     - `saveFn` é capturado pelo escopo da função retornada.  
+3. **Imutabilidade ao cadastrar usuários**  
+   - **Descrição:** A lista de usuários não deve ser alterada diretamente, mas recriada a cada inserção.  
+   - **Implementação:**  
+     - Operador spread `[...users, user]` em `makeUserAdder` (`src/main.js`)  
 
-4. **Função de Alta Ordem**  
-   - Exemplo:  
-     ```js
-     const filterUsers = (predicate, users) => users.filter(predicate);
-     ```  
-     Local: `src/utils.js`  
-     - Recebe uma função (`predicate`) como argumento.  
+4. **Código modular e organizado**  
+   - **Descrição:** O sistema deve ser dividido em múltiplos arquivos para melhor manutenção.  
+   - **Implementação:**  
+     - `auth.js` → segurança de credenciais  
+     - `storage.js` → persistência  
+     - `utils.js` → funções utilitárias  
+     - `main.js` → fluxo principal e CLI  
 
 ---
 
-## 🚀 Como Executar o Projeto
+## 🔎 Relação com Programação Funcional
 
-### Pré-requisitos
-- Node.js (v18+)  
+- **Função Lambda**  
+  - `u => u.role === 'admin'` (opção 4 do menu em `src/main.js`)  
 
-### Passos
-1. Clone este repositório ou extraia os arquivos.  
-2. Instale as dependências:  
-   ```bash
-   npm install
+- **List Comprehension (Map)**  
+  - `mapUsernames(users)` (opção 5 do menu em `src/utils.js`)  
+
+- **Closure**  
+  - `makeUserAdder(saveFn)` retorna outra função que usa `saveFn` (em `src/main.js`)  
+
+- **Função de Alta Ordem**  
+  - `filterUsers(predicate, users)` recebe uma função como argumento (em `src/utils.js`)  
+
+---
+
+📌 **Conclusão:**  
+Todos os requisitos funcionais e não funcionais foram implementados e documentados, garantindo rastreabilidade entre especificação e código.
