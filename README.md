@@ -17,7 +17,7 @@ Avaliar a aplicação de **Programação Funcional** no desenvolvimento de um pe
  📌 Este projeto é uma aplicação **CLI (Command Line Interface)** desenvolvida em **Node.js**, que permite **cadastrar, autenticar, listar e filtrar usuários**.  
 <br>
 
-  👉 [Clique para ver os **REQUISITOS** e as **FUNCIONALIDADES** do programa:](https://github.com/cristianosolutions/programacao-funcional/blob/main/REQUISITOS.md)
+  👉 📝[Clique para ver os **REQUISITOS** e as **FUNCIONALIDADES** do programa:](https://github.com/cristianosolutions/programacao-funcional/blob/main/REQUISITOS.md)
   
   <br>
 
