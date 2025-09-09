@@ -1,7 +1,7 @@
 # Sistema de Gerenciamento de Usuários <br> (Programação Funcional em JavaScript)
 
 Este projeto implementa um **sistema de gerenciamento de usuários** em **JavaScript**, explorando conceitos de **programação funcional**.  
-O sistema roda em linha de comando (CLI) e permite cadastrar, listar, autenticar e filtrar usuários.  
+O sistema roda em linha de comando **(CLI - Command Line Interface)** e permite cadastrar, listar, autenticar e filtrar usuários.  
 
 ---
 
