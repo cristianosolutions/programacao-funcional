@@ -1,13 +1,14 @@
-# Documento de Requisitos - (Programação Funcional)
+# 📝 Documento de Requisitos - (Programação Funcional)
 
-Este documento descreve os **requisitos funcionais e não funcionais** do sistema, relacionando cada requisito às partes específicas do código que o implementam.
+Este documento descreve os **requisitos funcionais e não funcionais** do sistema, relacionando cada requisito às partes específicas do código que foi implementado.
 
 ---
+<br>
 
 ## ✅ Requisitos Funcionais
 
 1. **Cadastrar usuários no sistema**  
-   - **Descrição:** O sistema deve permitir adicionar novos usuários com nome, e-mail, senha e cargo.  
+   - **Descrição:** O sistema deve permitir adicionar novos usuários com nome, e-mail, senha.  
    - **Implementação:**  
      - Função `makeUserAdder` (`src/main.js`)  
      - Persistência via `saveUsers` (`src/storage.js`)  
@@ -88,4 +89,104 @@ Este documento descreve os **requisitos funcionais e não funcionais** do sistem
 
 📌 **Conclusão:**  
 Todos os requisitos funcionais e não funcionais foram implementados e documentados, garantindo rastreabilidade entre especificação e código.
+
+---
+<br>
+
+## 🔎 Funcionalidades
+
+### 1) Listar usuários
+lista todos os usuários cadastrados no sistema.
+```
+1: joao (joao@email.com) - admin
+2: maria (maria@email.com) - user
+```
+### 2) Cadastrar usuário
+Permite adicionar um novo usuário. <br>
+O sistema pedirá as informações:
+```
+username: joao
+email: joao@email.com
+password: 123
+role (default 'user'): admin
+```
+Após salvar:
+```
+Usuário adicionado
+```
+### 3) Autenticar
+Permite autenticar um usuário com **login e senha**. <br>
+Exemplo:
+```
+username: joao
+password: 123
+
+autenticado
+ ```
+Se a senha estiver errada:
+```
+Falha na autenticação
+```
+### 4) Listar administrador
+Lista apenas usuários com papel **admin**.<br>
+Exemplo:
+```
+admins
+ - joao
+```
+### 5) Mostrar nomes de usuários
+Mostra somente os nomes de usuários cadastrados.<br>
+Exemplo:
+```
+Usernames:
+- joao
+- maria
+```
+### 0) Sair
+Encerra o programa.
+
+---
+
+<br>
+
+### ✅ Exemplo de Sessão Completa
+
+```
+npm start
+
+1) Listar usuários
+2) cadastrar usuário
+3) Autenticar
+4) Listar administrador
+5) Montar nomes de usuários
+0) Sair
+
+Escolha: 2
+
+username: joao
+email: joao@email.com
+password: 123
+role (default 'user'): admin
+Usuário adicionado.
+
+Escolha: 1
+1: joao (joao@email.com) - admin
+
+Escolha: 3
+username: joao
+password: 123
+Autenticado
+
+Escolha: 0
+Programa encerrado.
+```
+
+📌 **Resumo**: Este sistema é um exemplo didático de **CLI em Node.js** aplicando **Programação Funcional** para manipulação de usuários.
+
+---
+
+<br><br>
+
+
+
 
