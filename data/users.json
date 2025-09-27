@@ -3,9 +3,9 @@
     "id": 1,
     "username": "cristiano",
     "email": "cristianosolutions@gmail.com",
-    "password": "9a99612d6a5d9f3b2d71819c4e5884a8:fb5b95b1634ac3a8ab135beb999ad0745a178c5c470824765fdb0fcfb53dfd8c",
-    "role": "admin",
-    "createdAt": "2025-09-05T21:25:48.524Z",
+    "password": "12e0a82540c29f70b4c08af0907b4b61:e8fa7e8a2233f71eaba6645faf0c0de3fcb6662b31ffaaba468ffcc1d901dbb2",
+    "role": "user",
+    "createdAt": "2025-09-10T12:54:49.933Z",
     "active": true
   }
 ]
