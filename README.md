@@ -52,5 +52,24 @@ Escolha uma opção acima:
 ```
 ---
 
+<br>
+
+## 📝 Responsabilidades da equipe no desenvolvimento
+
+ ### Desenvolvimento código fonte
+  - **Cristiano Magno**
+  - **Italo Bruno**
+    <br>
+ ### Instalações de dependências e Estrutura de pastas
+  - **Amanda Freire**
+  - **Davi Gaspar**
+    <br>
+### Organização de Documentação e Markdown no GitHub
+  - **Raphaela Vidal**
+  - **Antonia Samara**
+
+---
+
+<br><br>
 
 
