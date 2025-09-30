@@ -60,7 +60,7 @@ Escolha uma opção acima:
   - **Cristiano Magno**
   - **Italo Bruno**
     <br>
- ### Instalações de dependências e testes
+ ### Instalação de dependências e testes
   - **Amanda Freire**
   - **Davi Gaspar**
     <br>
